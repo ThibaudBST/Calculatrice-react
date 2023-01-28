@@ -3,18 +3,8 @@ import "./App.css";
 import MovieCard from "./MovieCard";
 import SearchIcon from "./search.svg";
 
-// Key : a1cd029a
-
-const API_URL = "http://www.omdbapi.com?apikey=a1cd029a&";
-
-const movie = {
-  Title: "Batman: The Animated Series",
-  Year: "1992–1995",
-  imdbID: "tt0103359",
-  Type: "series",
-  Poster:
-    "https://m.media-amazon.com/images/M/MV5BOTM3MTRkZjQtYjBkMy00YWE1LTkxOTQtNDQyNGY0YjYzNzAzXkEyXkFqcGdeQXVyOTgwMzk1MTA@._V1_SX300.jpg",
-};
+// Clé d'API
+const API_URL = "your_api_key";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -27,6 +17,7 @@ const App = () => {
   };
 
   useEffect(() => {
+    // Recherche par défaut, ici Batman
     searchMovies("Batman");
     setSearchTerm("");
   }, []);
